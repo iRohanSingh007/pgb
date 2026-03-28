@@ -26,7 +26,7 @@ jobs:
           python3 - <<'EOF'
           import subprocess, time
 
-          STREAM_INPUT = "http://nomadiptv.online/YE9BQM8/4WTN897/1116401.m3u8"
+          STREAM_INPUT = "http://axycuxdy.bstream.me:80/live/YE9BQM8/4WTN897/1090636.m3u8"
           RTMP_OUTPUT = "rtmp://live.restream.io/live/re_11434354_eventfb94de2109f94f57878c82fb9b9c8460"
 
           def start_stream():
@@ -47,7 +47,7 @@ jobs:
 
           process = start_stream()
           while True:
-              time.sleep(30)
+              # time.sleep(30)
               if process.poll() is not None:
                   print("Stream stopped! Restarting FFmpeg...")
                   process = start_stream()
