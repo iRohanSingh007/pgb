@@ -37,6 +37,7 @@ jobs:
                 "-filter_complex", "overlay=1510:70",
                 "-vcodec", "libx264",
                 "-vprofile", "baseline",
+                "-g", "30",
                 "-b:v", "7000k",
                 "-maxrate", "7000k",
                 "-bufsize", "14000k",
