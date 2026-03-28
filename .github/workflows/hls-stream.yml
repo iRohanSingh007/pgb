@@ -1,8 +1,8 @@
 name: "6-Hour HLS to RTMP Stream (Auto Restart)"
 
 on:
-  schedule:
-      - cron: "55 */5 * * *" 
+  # schedule:
+  #     - cron: "55 */5 * * *" 
   workflow_dispatch:  # Manual trigger
   push:               # Auto trigger when commit happens
     branches:
@@ -19,15 +19,15 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt update && sudo apt install ffmpeg python3 wget git -y
-          wget -O logo.png "https://i.ibb.co/sdHxr15r/CURSED-STREAM-1.png"
+          wget -O logo.png "https://i.ibb.co/0jFCNpCf/Untitled-design.png"
 
       - name: Start Stream
         run: |
           python3 - <<'EOF'
           import subprocess, time
 
-          STREAM_INPUT = "http://iptvpro.stream:80/play/live.php?mac=00:1A:79:CC:C1:AB&stream=282674&extension=m3u8&play_token="
-          RTMP_OUTPUT = "rtmp://ovsu.okcdn.ru/input/1081439512_1081439512_43_lcoq56a4be"
+          STREAM_INPUT = "http://nomadiptv.online/YE9BQM8/4WTN897/1116401.m3u8"
+          RTMP_OUTPUT = "rtmp://live.restream.io/live/re_11434354_eventfb94de2109f94f57878c82fb9b9c8460"
 
           def start_stream():
             return subprocess.Popen([
