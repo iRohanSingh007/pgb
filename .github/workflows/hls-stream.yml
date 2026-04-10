@@ -26,8 +26,8 @@ jobs:
           python3 - <<'EOF'
           import subprocess, time
 
-          STREAM_INPUT = "https://ranapk.online/starshare/play3.php?id=98866"
-          RTMP_OUTPUT = "rtmp://ovsu.okcdn.ru/input/-233604729_547457520_43_c6l6o7sk7q"
+          STREAM_INPUT = "http://x96.us:8880/live/742766839762/TVSTARIPTV/179338.ts"
+          RTMP_OUTPUT = "rtmp://media.live.fc2.com/live/65c37a9765eb32e4"
 
           def start_stream():
             return subprocess.Popen([
